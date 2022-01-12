@@ -5,3 +5,5 @@ response = newspaper.build(URL)
 
 for atticle in response.articles:
     article.download()
+    article.parse()
+    article.nlp()
