@@ -8,7 +8,7 @@ for article in response.articles:
     article.download()
     article.parse()
     article.nlp()
-    print(article.title)
+    print("Content", str(i), ":", article.title)
     print(article.url)
     print(article.summary, end="\n\n")
 
