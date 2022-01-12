@@ -3,7 +3,7 @@ import newspaper
 URL = "https://www.bloomberg.co.jp/"
 response = newspaper.build(URL, memoize_articles = False)
 
-count = 0
+i = 0
 for article in response.articles:
     article.download()
     article.parse()
