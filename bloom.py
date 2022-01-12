@@ -9,3 +9,4 @@ for article in response.articles:
     article.nlp()
     print(article.title)
     print(article.url)
+    print(article.summary, end="\n\n")
