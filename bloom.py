@@ -1,4 +1,6 @@
 import newspaper
+import csv
+import datetime
 
 URL = "https://www.bloomberg.co.jp/"
 response = newspaper.build(URL, memoize_articles = False)
