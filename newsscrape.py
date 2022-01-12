@@ -1,7 +1,7 @@
 # import newspaper
 from newspaper import Article
 
-URL = "https://news.yahoo.co.jp/pickup/6415002"
+URL = "https://www.reuters.com/world/uk/party-over-uk-pm-johnson-faces-crunch-day-parliament-2022-01-12/"
 article = Article(URL)
 article.download()
 article.parse()
