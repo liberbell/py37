@@ -6,7 +6,7 @@ webdata = newspaper.build(URL, momoize_articles=False)
 i = 1
 for article in webdata.articles:
     article.download()
-    article.perse()
+    article.parse()
     article.nlp()
     print("Content:", str(i), ":", article.title)
     print(article.url)
