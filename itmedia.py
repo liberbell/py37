@@ -1,7 +1,7 @@
 import newspaper
 
 # URL = "https://www.itmedia.co.jp/"
-URL = ["https://www.itmedia.co.jp/", "https://thebridge.jp/"]
+URLs = ["https://www.itmedia.co.jp/", "https://thebridge.jp/"]
 # webdata = newspaper.build(URL, memoize_articles = False)
 
 # i = 1
@@ -17,3 +17,5 @@ URL = ["https://www.itmedia.co.jp/", "https://thebridge.jp/"]
 #         break
 #     i = i + 1
 
+for url in URLs:
+    webdata = newspaper.build(URL, memoize_articles = False, language="ja")
