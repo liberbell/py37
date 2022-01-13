@@ -15,12 +15,17 @@ writer.writerow(csv_header)
 
 i = 0
 for article in response.articles:
+    csvlist = []
     article.download()
     article.parse()
     article.nlp()
-    print("Content", str(i), ":", article.title)
-    print(article.url)
-    print(article.summary, end="\n\n")
+    # print("Content", str(i), ":", article.title)
+    # print(article.url)
+    # print(article.summary, end="\n\n")
+    csvlist.append(str(i))
+    csvlist.append(article.title)
+    csvlist.append(article.url)
+    csvlist.append(article.summary)
 
     if i > 9:
         break
