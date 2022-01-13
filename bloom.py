@@ -21,3 +21,7 @@ i = 0
 csv_date = datetime.datetime.today().strftime("%Y%m%d")
 csv_file_name = "Bloomberg" + csv_date + ".csv"
 # print(csv_date)
+
+f = open(csv_file_name, "w", encoding="cp932", errors="ignore")
+writer = csv.writer(f, lineterminator="\n")
+csv_header = ["No", "Title", "URL", "Summary"]
