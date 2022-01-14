@@ -1,3 +1,4 @@
+from tkinter import Grid
 import pandas as pd
 import requests
 from datetime import datetime as dt
@@ -16,3 +17,11 @@ webdata[0].dropna(inplace=True)
 print(webdata[0].tail())
 
 webdata[0]["Date2"] = [dt.strptime(i, "%b %d, %Y") for i in webdata[0]["Date"]]
+print(webdata[0].tail())
+
+webdata[0].set_index("Date2", inplace=True)
+print(webdata[0].tail())
+
+# print(webdata[0]["Adj Close**"].dtype)
+
+webdata[0]["Adj Close**"].plot("AAPL Stock price", Grid=True)
