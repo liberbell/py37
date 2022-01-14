@@ -9,3 +9,7 @@ webdata = pd.read_html(requests.get(URL, headers={'User-agent': 'Mozilla/5.0'}).
 print(webdata[0].tail())
 
 webdata[0]["Adj Close**"] = pd.to_numeric(webdata[0]["Adj Close**"], errors="coerce")
+print(webdata[0].tail())
+
+webdata[0].dropna(inplace=True)
+print(webdata[0].tail())
