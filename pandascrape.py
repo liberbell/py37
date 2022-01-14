@@ -1,7 +1,6 @@
-import imp
 import pandas as pd
 import requests
-from datetime import datetime
+from datetime import datetime as dt
 
 URL = "https://finance.yahoo.com/quote/AAPL/history?p=AAPL"
 # webdata = pd.read_html(URL, header=0)
@@ -15,3 +14,5 @@ print(webdata[0].tail())
 
 webdata[0].dropna(inplace=True)
 print(webdata[0].tail())
+
+webdata[0]["Date2"] = [dt.strptime(i, "%b %d, %Y") for i in webdata[0]["Date"]]
