@@ -24,4 +24,4 @@ print(webdata[0].tail())
 
 # print(webdata[0]["Adj Close**"].dtype)
 
-webdata[0]["Adj Close**"].plot("AAPL Stock price", Grid=True)
+webdata[0]["Adj Close**"].plot(title="AAPL Stock price", grid=True)
