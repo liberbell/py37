@@ -24,3 +24,4 @@ html = """
 
 soup = BeautifulSoup(html, "html.parser")
 print(soup)
+print(soup.prettify)
