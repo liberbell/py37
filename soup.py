@@ -1,3 +1,4 @@
+from ast import parse
 from bs4 import BeautifulSoup
 
 html = """
@@ -20,3 +21,5 @@ html = """
     </body>
 </html>
 """
+
+soup = BeautifulSoup(html, "html.parser")
