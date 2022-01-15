@@ -8,5 +8,5 @@ print(response.status_code)
 print(response.content)
 print(response.encoding)
 
-for key, value in response.header.items():
+for key, value in response.headers.items():
     print(key, "  ", value)
