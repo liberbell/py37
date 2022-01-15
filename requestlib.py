@@ -1,3 +1,4 @@
+from socket import timeout
 import requests
 
 URL = "https://www.yahoo.co.jp"
@@ -16,3 +17,10 @@ header = {"user_agent": user_agent}
 
 response = requests.get(URL, headers= header)
 print(response.status_code)
+
+response = requests.get(URL, timeout=2)
+print(response.status_code)
+
+param = {"q" : "python"}
+URL2 = "https://www.google.com/search"
+response = requests.get(URL2, params=param)
