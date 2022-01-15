@@ -7,3 +7,6 @@ print(response.status_code)
 
 print(response.content)
 print(response.encoding)
+
+for key, value in response.header.items():
+    print(key, "  ", value)
