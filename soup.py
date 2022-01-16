@@ -34,3 +34,7 @@ print(soup.title.name)
 
 print(soup.body.p)
 print(soup.body.p.next_sibling.nextSibling)
+print(soup.body.p.next_sibling.nextSibling.a)
+print(soup.body.p.next_sibling.nextSibling.a.string)
+print(soup.body.p.next_sibling.nextSibling.a["href"])
+
