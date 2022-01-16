@@ -48,3 +48,7 @@ for tag_a in soup.find_all("a"):
     print(tag_a.string)
     print(tag_a["href"], end="\n\n")
     # print(tag_a, "\n")
+
+print(soup.select("body > p.end > b"))
+print(soup.select("body > p.end > b")[0].string)
+
