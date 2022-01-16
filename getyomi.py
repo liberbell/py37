@@ -27,3 +27,6 @@ print(element[0].h3.a["href"])
 print(element[0].article.next_sibling.next_sibling.h3.a.string)
 print(element[0].article.next_sibling.next_sibling.h3.a["href"])
 
+for sibling in element[0].article.next_sibling:
+    print(sibling.h3.a.string if sibling != "\n")
+
