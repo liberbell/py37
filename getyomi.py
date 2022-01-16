@@ -34,4 +34,7 @@ element = soup.select("div.headline")
 # print(element[0].prettify)
 
 elms_news = element[0].find_all("h3")
-print(elms_news)
+# print(elms_news)
+for elem in elms_news:
+    print(elem.a.string)
+    print(elem.a["href"])
