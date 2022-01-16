@@ -38,3 +38,8 @@ print(soup.body.p.next_sibling.nextSibling.a)
 print(soup.body.p.next_sibling.nextSibling.a.string)
 print(soup.body.p.next_sibling.nextSibling.a["href"])
 
+print("----------")
+print(soup.find_all("a"))
+
+for tag_a in soup.find_all("a"):
+    print(tag_a, "\n")
