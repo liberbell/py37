@@ -41,5 +41,10 @@ print(soup.body.p.next_sibling.nextSibling.a["href"])
 print("----------")
 print(soup.find_all("a"))
 
+# for tag_a in soup.find_all("a"):
+#     print(tag_a, "\n")
+
 for tag_a in soup.find_all("a"):
-    print(tag_a, "\n")
+    print(tag_a.string)
+    print(tag_a["href"])
+    # print(tag_a, "\n")
