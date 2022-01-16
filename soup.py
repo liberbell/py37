@@ -28,3 +28,6 @@ print(soup.prettify)
 print(soup.html.head.title)
 print(soup.title)
 print(soup.title.string)
+
+print(type(soup.title))
+print(soup.title.name)
