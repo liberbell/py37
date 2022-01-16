@@ -17,3 +17,7 @@ element = soup.select("div.headline > article:nth-child(1) > div > h3 > a")
 print(element[0])
 print(element[0].contents[0])
 print(element[0].attrs["href"])
+print("------")
+
+element = soup.select("div.headline")
+print(element[0].prettify)
