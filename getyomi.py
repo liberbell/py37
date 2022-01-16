@@ -11,3 +11,5 @@ print(webdata.text)
 
 soup = BeautifulSoup(webdata.text, "html.parser")
 print(soup)
+
+element = soup.select("div.headline > article:nth-child(1) > div > h3 > a")
