@@ -20,4 +20,5 @@ print(element[0].attrs["href"])
 print("------")
 
 element = soup.select("div.headline")
-print(element[0].prettify)
+# print(element[0].prettify)
+print(element[0].h3)
