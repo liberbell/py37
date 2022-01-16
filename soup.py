@@ -33,4 +33,4 @@ print(type(soup.title))
 print(soup.title.name)
 
 print(soup.body.p)
-print(soup.body.p.next_siblings)
+print(soup.body.p.next_sibling.nextSibling)
