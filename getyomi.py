@@ -31,4 +31,7 @@ element = soup.select("div.headline")
 #     print(sib.h3.a.string if sib != "\n" else "")
 #     print(sib.h3.a["href"])
 
-print(element[0].prettify)
+# print(element[0].prettify)
+
+elms_news = element[0].find_all("h3")
+print(elms_news)
