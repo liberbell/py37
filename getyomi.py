@@ -24,4 +24,6 @@ element = soup.select("div.headline")
 print(element[0].h3.a.string)
 print(element[0].h3.a["href"])
 
-print(element[0].li.next_siblings)
+print(element[0].article.next_sibling.next_sibling.h3.a.string)
+print(element[0].article.next_sibling.next_sibling.h3.a["href"])
+
