@@ -30,3 +30,5 @@ element = soup.select("div.headline")
 # for sib in element[0].article.next_sibling:
 #     print(sib.h3.a.string if sib != "\n" else "")
 #     print(sib.h3.a["href"])
+
+print(element[0].prettify)
