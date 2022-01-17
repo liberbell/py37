@@ -18,9 +18,13 @@ news_list = soup.find_all("a")
 # print(news_list)
 
 element = soup.find_all(href=re.compile("news.yahoo.co.jp/pickup"))
-print(element[0].span.string)
+# print(element[0].span.string)
 # print(element)
-print(element[0].attrs["href"])
+# print(element[0].attrs["href"])
 
-print(element[1].span.string)
-print(element[1].attrs["href"])
+# print(element[1].span.string)
+# print(element[1].attrs["href"])
+
+for news in element:
+    print(news.span.string)
+    print(news.attrs["href"])
