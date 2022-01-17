@@ -25,6 +25,11 @@ element = soup.find_all(href=re.compile("news.yahoo.co.jp/pickup"))
 # print(element[1].span.string)
 # print(element[1].attrs["href"])
 
-for news in element:
-    print(news.span.string)
-    print(news.attrs["href"])
+# for news in element:
+    # print(news.span.string)
+    # print(news.attrs["href"])
+
+pickup_url = [news.attrs["href"] for news in element]
+print(pickup_url)
+
+# uamods-pickup > div.sc-faswKr.dhzAkO > div > p > a
