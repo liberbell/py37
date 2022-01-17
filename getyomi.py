@@ -37,4 +37,4 @@ elms_news = element[0].find_all("h3")
 # print(elms_news)
 for elem in elms_news:
     print(elem.a.string)
-    print(elem.a["href"])
+    print(elem.a["href"], end="\n\n")
