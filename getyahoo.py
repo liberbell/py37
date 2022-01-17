@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import time
+import re
 
 URL = "https://www.yahoo.co.jp"
 webdata = requests.get(URL)
