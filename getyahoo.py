@@ -1,3 +1,4 @@
+from xml.dom.minidom import Element
 from bs4 import BeautifulSoup
 import requests
 import time
@@ -14,4 +15,8 @@ soup = BeautifulSoup(webdata.text, "html.parser")
 
 # news_list = soup.select("tabpanelTopics1 > div > div._2jjSS8r_I9Zd6O9NFJtDN- > ul > li:nth-child(1) > article > a > div > div > h1")
 news_list = soup.find_all("a")
-print(news_list)
+# print(news_list)
+
+element = soup.find_all(href=re.compile("news.yahoo.co.jp/pickpu"))
+# print(element[0].span.string)
+print(element)
