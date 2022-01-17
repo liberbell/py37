@@ -17,6 +17,6 @@ soup = BeautifulSoup(webdata.text, "html.parser")
 news_list = soup.find_all("a")
 # print(news_list)
 
-element = soup.find_all(href=re.compile("news.yahoo.co.jp/pickpu"))
+element = soup.find_all(href=re.compile("news.yahoo.co.jp/pickup"))
 # print(element[0].span.string)
 print(element)
