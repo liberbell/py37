@@ -34,7 +34,7 @@ print(pickup_url)
 
 for target_link in pickup_url:
     pickup_data = requests.get(target_link)
-    pickup_soup = BeautifulSoup(pickup_data.text, "http.parser")
+    pickup_soup = BeautifulSoup(pickup_data.text, "html.parser")
 
     pickup_element = pickup_soup.find("p", class_="sc-chYKBT fwErDw")
     # class="sc-bRbqnn iAbiKn"
