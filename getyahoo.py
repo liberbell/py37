@@ -45,8 +45,8 @@ for target_link in pickup_url:
     news_data = requests.get(targetnews_url)
     news_soap = BeautifulSoup(news_data.text, "html.parser")
 
-    print(news_soap.title.text)
-    print(targetnews_url)
+    print("Title: ", news_soap.title.text)
+    print("URL: ", targetnews_url)
     
     detail_text = news_soap.find(class_=re.compile("SlinkDirectlink"))
     print(detail_text.text if hasattr(detail_text, "text") else "", end="\n\n")
