@@ -39,7 +39,7 @@ for target_link in pickup_url:
     pickup_element = pickup_soup.find("p", class_="sc-chYKBT fwErDw")
     # class="sc-bRbqnn iAbiKn"
 
-    targetnews_url = pickup_element.attrs["href"]
+    targetnews_url = pickup_element.a.attrs["href"]
     print(targetnews_url)
 
 # uamods-pickup > div.sc-faswKr.dhzAkO > div > p > a
