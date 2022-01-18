@@ -51,6 +51,8 @@ for target_link in pickup_url:
     detail_text = news_soap.find(class_=re.compile("SlinkDirectlink"))
     print(detail_text.text if hasattr(detail_text, "text") else "", end="\n\n")
 
+    time.sleep(1)
+
 # uamods-pickup > div.sc-faswKr.dhzAkO > div > p > a
 # <p class="sc-hmXxxW fDHxNM yjSlinkDirectlink highLightSearchTarget">　政府が<a class="yjSlinkDirectlinkHl" data-query="新型コロナウイルス" rel="noopener" href="https://search.yahoo.co.jp/search?ei=UTF-8&amp;rkf=1&amp;slfr=1&amp;qrw=0&amp;p=%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9&amp;fr=link_kw_nws_direct" target="_blank" style="cursor: pointer;">新型コロナウイルス</a>の「<a class="yjSlinkDirectlinkHl" data-query="まん延防止等重点措置" rel="noopener" href="https://search.yahoo.co.jp/search?ei=UTF-8&amp;rkf=1&amp;slfr=1&amp;qrw=0&amp;p=%E3%81%BE%E3%82%93%E5%BB%B6%E9%98%B2%E6%AD%A2%E7%AD%89%E9%87%8D%E7%82%B9%E6%8E%AA%E7%BD%AE&amp;fr=link_kw_nws_direct" target="_blank" style="cursor: pointer;">まん延防止等重点措置</a>」を1都10県で適用する方向となったのを受け、各自治体は18日、対象地域の範囲や飲食店の営業時間短縮など具体的な措置内容の調整を本格化させた。感染力の強い新変異株「オミクロン株」が急速に広がる中で医療<a class="yjSlinkDirectlinkHl" data-query="逼迫" rel="noopener" href="https://search.yahoo.co.jp/search?ei=UTF-8&amp;rkf=1&amp;slfr=1&amp;qrw=0&amp;p=%E9%80%BC%E8%BF%AB&amp;fr=link_kw_nws_direct" target="_blank" style="cursor: pointer;">逼迫</a>の回避と経済活動の維持の両立を模索。19日にも予定される正式決定までの間、難しい検討を迫られそうだ。
 
