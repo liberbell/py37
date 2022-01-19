@@ -36,7 +36,8 @@ while True:
         # print(element_h3.text)
         csv_list.append(element_h3.text)
         element_a = element_h3.find_element_by_xpath("..")
-        print(element_a.get_attribute("href"))
+        # print(element_a.get_attribute("href"))
+        csv_list.append(element_a.get_attribute("href"))
 
     next_link = driver.find_element_by_id("pnnext")
     # print(next_link)
