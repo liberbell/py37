@@ -1,3 +1,4 @@
+from tokenize import Ignore
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from time import sleep
@@ -7,7 +8,11 @@ import datetime
 URL = "https://www.google.com"
 Search_words = "python"
 csv_date = datetime.datetime.today().strftime("%Y%m%d")
-print(csv_date)
+# print(csv_date)
+csv_file_name = "google_python_" + csv_date + ".csv"
+file = open(csv_file_name, "w", encoding="cp932", errors="ignore")
+writer = csv.writer(file, lineterminator="\n")
+csv_header = ["No", "Title", "URL"]
 
 options = Options()
 options.add_argument('--headless')
