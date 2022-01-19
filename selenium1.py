@@ -1,10 +1,14 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from time import sleep
 
 URL = "https://www.google.com"
 Search_words = "python"
 driver = webdriver.Chrome("./chromedriver")
 driver.get(URL)
+
+options = Options()
+options.add_argument('--headless')
 
 search_bar = driver.find_element_by_name("q")
 search_bar.send_keys(Search_words)
