@@ -39,11 +39,11 @@ while True:
         # print(element_a.get_attribute("href"))
         csv_list.append(element_a.get_attribute("href"))
         writer.writerow(csv_list)
+        rank = rank + 1
 
     next_link = driver.find_element_by_id("pnnext")
     # print(next_link)
     driver.get(next_link.get_attribute("href"))
-    rank = rank + 1
 
     if count > 4:
         break
