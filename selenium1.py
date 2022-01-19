@@ -5,11 +5,11 @@ from time import sleep
 URL = "https://www.google.com"
 Search_words = "python"
 
-driver.get(URL)
-
 options = Options()
 options.add_argument('--headless')
 driver = webdriver.Chrome("./chromedriver", options=options)
+
+driver.get(URL)
 
 search_bar = driver.find_element_by_name("q")
 search_bar.send_keys(Search_words)
