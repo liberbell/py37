@@ -18,4 +18,4 @@ search_bar.submit()
 for element_h3 in  driver.find_elements_by_xpath("//a/h3"):
     print(element_h3.text)
     element_a = element_h3.find_element_by_xpath("..")
-    print(element_a.text)
+    print(element_a.get_attribute("href"))
