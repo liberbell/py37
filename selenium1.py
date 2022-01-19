@@ -1,9 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from time import sleep
+import csv
+import datetime
 
 URL = "https://www.google.com"
 Search_words = "python"
+csv_date = datetime.datetime().today().strftime("%Y%m%d")
 
 options = Options()
 options.add_argument('--headless')
@@ -30,3 +33,4 @@ while True:
 
     if count > 4:
         break
+
