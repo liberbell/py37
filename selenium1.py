@@ -15,10 +15,18 @@ search_bar = driver.find_element_by_name("q")
 search_bar.send_keys(Search_words)
 search_bar.submit()
 
-for element_h3 in  driver.find_elements_by_xpath("//a/h3"):
-    print(element_h3.text)
-    element_a = element_h3.find_element_by_xpath("..")
-    print(element_a.get_attribute("href"))
+count = 0
+while True:
+    count = count + 1
+    sleep(1)
+    for element_h3 in  driver.find_elements_by_xpath("//a/h3"):
+        print(element_h3.text)
+        element_a = element_h3.find_element_by_xpath("..")
+        print(element_a.get_attribute("href"))s
 
     next_link = driver.find_element_by_id("pnnext")
-    print(next_link)
+    # print(next_link)
+    driver.get(next_link.get_attribute("href"))
+
+    if count > 4:
+        break
