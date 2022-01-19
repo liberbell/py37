@@ -38,6 +38,7 @@ while True:
         element_a = element_h3.find_element_by_xpath("..")
         # print(element_a.get_attribute("href"))
         csv_list.append(element_a.get_attribute("href"))
+        writer.writerow(csv_list)
 
     next_link = driver.find_element_by_id("pnnext")
     # print(next_link)
@@ -46,4 +47,4 @@ while True:
 
     if count > 4:
         break
-
+file.close()
