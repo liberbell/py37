@@ -15,3 +15,6 @@ options = Options()
 options.add_argument('--headless')
 # driver = webdriver.Chrome("./chromedriver", options=options)
 driver = webdriver.Chrome("./chromedriver")
+driver.get(URL)
+
+sleep(2)
