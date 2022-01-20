@@ -21,8 +21,11 @@ sleep(2)
 
 error_flag = False
 
+
+# <input aria-label="Phone number, username, or email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="_2hvTZ pexuQ zyHYP" value="">
 try:
     print()
+    username_input = driver.find_element_by_xpath("//input[@aria-label='Phone number, username, or email']")
 except Exception:
     error_flag = True
     print("Error when input ID or Password.")
