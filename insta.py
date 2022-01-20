@@ -60,12 +60,10 @@ if error_flag is False:
 target_username = "onerepblic"
 if error_flag is False:
     try:
-        sleep(1)
-        saveenv_button = driver.find_element_by_xpath("//button[text()='後で']")
-        saveenv_button.click()
-        sleep(1)
-        notnow_button = driver.find_element_by_xpath("//button[text()='後で']")
-        notnow_button.click()
+        target_profiel_url = URL + target_username
+        driver.get(target_profiel_url)
+        sleep(2)
+
 
     except Exception:
         print("Error when search keyword.")
