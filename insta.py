@@ -18,3 +18,5 @@ driver = webdriver.Chrome("./chromedriver")
 driver.get(URL)
 
 sleep(2)
+
+error_flag = False
