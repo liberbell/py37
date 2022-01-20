@@ -57,14 +57,25 @@ if error_flag is False:
     except Exception:
         pass
 
-target_username = "onerepblic"
+target_username = "onerepublic"
 if error_flag is False:
     try:
         target_profiel_url = URL + target_username
         driver.get(target_profiel_url)
         sleep(2)
 
-
     except Exception:
         print("Error when search keyword.")
+        error_flag = True
+
+if error_flag is False:
+    try:
+        post_count = driver.find_element_by_xpath("//span[text='投稿']").text
+        post_count = post_count.replace("投稿", "")
+        post_count = post_count.replace("件", "")
+        print(post_count)
+        sleep(2)
+
+    except Exception:
+        print("Can't get post counts.")
         error_flag = True
