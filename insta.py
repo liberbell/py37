@@ -40,7 +40,16 @@ try:
     sleep(1)
 
     # <button class="aOOlW   HoLwm " tabindex="0">後で</button>
-    
+
 except Exception:
     error_flag = True
     print("Error when input ID or Password.")
+
+if error_flag is False:
+    try:
+        sleep(1)
+        notnow_button = driver.find_element_by_xpath("//button[text()='後で']")
+        notnow_button.click()
+        sleep 1
+    except Exception:
+        pass
