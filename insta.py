@@ -38,6 +38,9 @@ try:
     login_button = driver.find_element_by_xpath("//button[@type='submit']")
     login_button.submit()
     sleep(1)
+
+    # <button class="aOOlW   HoLwm " tabindex="0">後で</button>
+    
 except Exception:
     error_flag = True
     print("Error when input ID or Password.")
