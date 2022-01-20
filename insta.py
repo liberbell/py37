@@ -20,3 +20,9 @@ driver.get(URL)
 sleep(2)
 
 error_flag = False
+
+try:
+    print()
+except Exception:
+    error_flag = True
+    print("Error when input ID or Password.")
