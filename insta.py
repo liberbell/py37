@@ -56,3 +56,17 @@ if error_flag is False:
 
     except Exception:
         pass
+
+target_username = "onerepblic"
+if error_flag is False:
+    try:
+        sleep(1)
+        saveenv_button = driver.find_element_by_xpath("//button[text()='後で']")
+        saveenv_button.click()
+        sleep(1)
+        notnow_button = driver.find_element_by_xpath("//button[text()='後で']")
+        notnow_button.click()
+
+    except Exception:
+        print("Error when search keyword.")
+        error_flag = True
