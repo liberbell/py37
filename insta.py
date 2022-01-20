@@ -23,9 +23,18 @@ error_flag = False
 
 
 # <input aria-label="Phone number, username, or email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="_2hvTZ pexuQ zyHYP" value="">
+# <input aria-label="Password" aria-required="true" autocapitalize="off" autocorrect="off" name="password" type="password" class="_2hvTZ pexuQ zyHYP" value="">
 try:
     print()
     username_input = driver.find_element_by_xpath("//input[@aria-label='Phone number, username, or email']")
+    username_input.send_keys(ID)
+    sleep(1)
+
+    password_input = driver.find_element_by_xpath("//input[@aria-label='Password']")
+    password_input.send_keys(PASSWORD)
+    sleep(1)
+
+    login_button = driver.find_element_by_xpath("//button[@type='submit']")
 except Exception:
     error_flag = True
     print("Error when input ID or Password.")
