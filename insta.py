@@ -48,8 +48,11 @@ except Exception:
 if error_flag is False:
     try:
         sleep(1)
+        saveenv_button = driver.find_element_by_xpath("//button[text()='後で']")
+        saveenv_button.click()
+        sleep(1)
         notnow_button = driver.find_element_by_xpath("//button[text()='後で']")
         notnow_button.click()
-        sleep(1)
+
     except Exception:
         pass
