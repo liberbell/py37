@@ -54,7 +54,7 @@ if error_flag is False:
         sleep(1)
         notnow_button = driver.find_element_by_xpath("//button[text()='後で']")
         notnow_button.click()
-        sleep(1)
+        sleep(2)
 
     except Exception:
         pass
@@ -86,13 +86,15 @@ if error_flag is False:
                     for image in soup.find_all("img"):
                         all_images.append(image)
                     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                    sleep(1)
+                    sleep(2)
+                    # print(all_images)
 
                     if i > 5:
                         break
                 
                 for index, image_url in enumerate(all_images):
-                    print("ImageNo: " + str(index) + " Image URL: " + image_url)
+                    print("ImageNo: " + str(index))
+                    print("image[src]: " + image_url["src"], end="\n\n")
             
             except Exception:
                 print("Error scroll.")
