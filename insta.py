@@ -70,7 +70,7 @@ if error_flag is False:
 
 if error_flag is False:
     try:
-        post_count = driver.find_element_by_xpath("//span[text='投稿']").text
+        post_count = driver.find_element_by_xpath("//span[text()='投稿']").text
         post_count = post_count.replace("投稿", "")
         post_count = post_count.replace("件", "")
         print(post_count)
