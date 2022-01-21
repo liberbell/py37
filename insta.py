@@ -91,7 +91,7 @@ if error_flag is False:
 
                     if i > 5:
                         break
-                
+                all_images = list(dict.fromkeys(all_images))
                 for index, image_url in enumerate(all_images):
                     print("ImageNo: " + str(index))
                     print("image[src]: " + image_url["src"], end="\n\n")
