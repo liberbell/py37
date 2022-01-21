@@ -3,6 +3,7 @@ from turtle import pos
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from time import sleep
+from bs4 import BeautifulSoup
 
 URL = "https://www.instagram.com/"
 
@@ -79,6 +80,7 @@ if error_flag is False:
         if post_count > 12:
             scroll_count = int(post_count/12) + 1
             try:
+                all_images = []
                 for i in range(scroll_count):
                     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                     sleep(1)
@@ -92,3 +94,4 @@ if error_flag is False:
     except Exception:
         print("Can't get post counts.")
         error_flag = True
+
