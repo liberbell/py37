@@ -1,4 +1,5 @@
 import json
+from turtle import pos
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from time import sleep
@@ -73,8 +74,12 @@ if error_flag is False:
         post_count = driver.find_element_by_xpath("//span[text()='投稿']").text
         post_count = post_count.replace("投稿", "")
         post_count = post_count.replace("件", "")
-        print(post_count)
-        sleep(2)
+        # print(post_count)
+        post_count = int(post_count)
+        if post_count > 12:
+            scroll_count = int(post_count/12) + 1
+            for i in range(scroll_count):
+                
 
     except Exception:
         print("Can't get post counts.")
