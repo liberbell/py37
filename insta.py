@@ -64,7 +64,7 @@ if error_flag is False:
     try:
         target_profiel_url = URL + target_username
         driver.get(target_profiel_url)
-        sleep(2)
+        sleep(3)
 
     except Exception:
         print("Error when search keyword.")
@@ -82,6 +82,7 @@ if error_flag is False:
             try:
                 all_images = []
                 for i in range(scroll_count):
+                    sleep(1)
                     soup = BeautifulSoup(driver.page_source, "html.parser")
                     for image in soup.find_all("img"):
                         all_images.append(image)
