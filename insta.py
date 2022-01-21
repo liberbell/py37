@@ -82,8 +82,12 @@ if error_flag is False:
             try:
                 all_images = []
                 for i in range(scroll_count):
+                    soup = BeautifulSoup(driver.page_source, "html.parser")
+                    for image in soup.find_all("img"):
+                        all_images.append(image)
                     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                     sleep(1)
+
                     if i > 5:
                         break
             
