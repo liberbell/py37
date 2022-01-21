@@ -78,8 +78,14 @@ if error_flag is False:
         post_count = int(post_count)
         if post_count > 12:
             scroll_count = int(post_count/12) + 1
-            for i in range(scroll_count):
-                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            try:
+                for i in range(scroll_count):
+                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                    sleep(1)
+            
+            except Exception:
+                print("Error scroll.")
+                error_flag = True
 
     except Exception:
         print("Can't get post counts.")
