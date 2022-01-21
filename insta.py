@@ -92,7 +92,7 @@ if error_flag is False:
                         break
                 
                 for index, image_url in enumerate(all_images):
-                    print("ImageNo: ", index, " Image URL: " + image_url)
+                    print("ImageNo: " + str(index) + " Image URL: " + image_url)
             
             except Exception:
                 print("Error scroll.")
