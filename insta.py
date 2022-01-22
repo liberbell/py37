@@ -97,7 +97,7 @@ if error_flag is False:
                     sleep(2)
                     # print(all_images)
 
-                    if i > 5:
+                    if i > 2:
                         break
                 all_images = list(dict.fromkeys(all_images))
                 for index, image_url in enumerate(all_images):
@@ -117,4 +117,4 @@ if error_flag is False:
         filename = "image_" + str(index) + ".jpg"
         # print(filename)
         image_path = os.path.join(path, filename)
-        print(image_path)
+        image_link = image["src"]
