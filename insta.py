@@ -118,3 +118,8 @@ if error_flag is False:
         # print(filename)
         image_path = os.path.join(path, filename)
         image_link = image["src"]
+
+        url_ptn = re.compile(r"^(http|https)://")
+        response = url_ptn.match(image_link)
+        if response:
+            
