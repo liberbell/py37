@@ -98,7 +98,7 @@ if error_flag is False:
                     sleep(2)
                     # print(all_images)
 
-                    if i > 2:
+                    if i > 1:
                         break
                 all_images = list(dict.fromkeys(all_images))
                 for index, image_url in enumerate(all_images):
@@ -124,8 +124,11 @@ if error_flag is False:
 
             url_ptn = re.compile(r"^(http|https)://")
             response = url_ptn.match(image_link)
+            print("log1")
             if response:
+                print("log2")
                 response_data = requests.get(image_link, stream=True)
+                print("log3")
                 with open(image_path, "wb")as file:
                     shutil.copy(response_data.raw, file)
     except Exception as e:
