@@ -1,3 +1,4 @@
+import imaplib
 import json
 from sys import path
 from turtle import pos
@@ -113,13 +114,20 @@ if error_flag is False:
         error_flag = True
 
 if error_flag is False:
-    for index, image in enumerate(all_images):
-        filename = "image_" + str(index) + ".jpg"
-        # print(filename)
-        image_path = os.path.join(path, filename)
-        image_link = image["src"]
+    try:
+        for index, image in enumerate(all_images):
+            filename = "image_" + str(index) + ".jpg"
+            # print(filename)
+            image_path = os.path.join(path, filename)
+            image_link = image["src"]
 
-        url_ptn = re.compile(r"^(http|https)://")
-        response = url_ptn.match(image_link)
-        if response:
-            
+            url_ptn = re.compile(r"^(http|https)://")
+            response = url_ptn.match(image_link)
+            if response:
+                response_data = requests.get(image_link, stream=True)
+                with open(image_path, "wb")as file:
+                    shutil.copy(response.row, file)
+    except Exception as e:
+        print(e)
+        print(str(index) + " file image fail.")
+        print(image_link)
