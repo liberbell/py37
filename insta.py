@@ -1,4 +1,5 @@
 import json
+from sys import path
 from turtle import pos
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -111,3 +112,8 @@ if error_flag is False:
         print("Can't get post counts.")
         error_flag = True
 
+if error_flag is False:
+    for index, image in enumerate(all_images):
+        filename = "image_" + str(index) + ".jpg"
+        image_path = os.path.join(path, filename)
+        print(image_path)
