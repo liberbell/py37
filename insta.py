@@ -4,6 +4,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from time import sleep
 from bs4 import BeautifulSoup
+import requests
+import re
+import os
+import shutil
 
 URL = "https://www.instagram.com/"
 
