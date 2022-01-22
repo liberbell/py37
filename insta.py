@@ -126,7 +126,7 @@ if error_flag is False:
             if response:
                 response_data = requests.get(image_link, stream=True)
                 with open(image_path, "wb")as file:
-                    shutil.copy(response.raw, file)
+                    shutil.copy(response_data.raw, file)
     except Exception as e:
         print(e)
         print(str(index) + " file image fail.")
