@@ -16,7 +16,7 @@ with open("insta_secret.json") as f:
     insta_key = json.load(f)
 ID = insta_key["id"]
 PASSWORD = insta_key["password"]
-paht = "./insta_photo/"
+path = "./insta_photo/"
 
 
 # print(ID, PASSWORD)
@@ -115,6 +115,6 @@ if error_flag is False:
 if error_flag is False:
     for index, image in enumerate(all_images):
         filename = "image_" + str(index) + ".jpg"
-        print(filename)
-        # image_path = os.path.join(path, filename)
-        # print(image_path)
+        # print(filename)
+        image_path = os.path.join(path, filename)
+        print(image_path)
