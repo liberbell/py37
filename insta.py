@@ -115,5 +115,6 @@ if error_flag is False:
 if error_flag is False:
     for index, image in enumerate(all_images):
         filename = "image_" + str(index) + ".jpg"
-        image_path = os.path.join(path, filename)
-        print(image_path)
+        print(filename)
+        # image_path = os.path.join(path, filename)
+        # print(image_path)
