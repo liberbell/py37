@@ -130,7 +130,8 @@ if error_flag is False:
                 response_data = requests.get(image_link, stream=True)
                 print("log3")
                 with open(image_path, "wb")as file:
-                    shutil.copy(response_data.raw, file)
+                    print("log4")
+                    shutil.copyfileobj(response_data.raw, file)
     except Exception as e:
         print(e)
         print(str(index) + " file image fail.")
